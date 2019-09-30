@@ -1,0 +1,39 @@
+version: '3'
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "8080:8080"  
+    depends_on:
+      - ap1
+      - ap2
+      - ap3
+  ap1:
+    build: ./chatserver
+    ports:
+      - "9000:8080"    
+    environment:
+      MQ_HOST: "rabbitmq"
+    depends_on:
+      - rabbitmq
+  ap2:
+    build: ./chatserver
+    ports:
+      - "9001:8080"    
+    environment:
+      MQ_HOST: "rabbitmq"
+    depends_on:
+      - rabbitmq
+  ap3:
+    build: ./chatserver
+    ports:
+      - "9002:8080"    
+    environment:
+      MQ_HOST: "rabbitmq"
+    depends_on:
+      - rabbitmq
+  rabbitmq:
+    build: ./rabbitmq
+    ports: 
+      - "61613:61613"
+      - "15672:15672"
