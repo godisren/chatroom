@@ -9,7 +9,7 @@ The docker-compose file illustrated the deployment of architecture in production
 | ------------ | ------------ |
 |  chatroom-client-stomp | Client-side source code. Java Gradle Project  |
 |  chatroom-server-queue | Server-side source code. Java Gradle Project |
-| docker |  docker-compose related environment |
+| docker |  docker-compose related files |
 
 #### Run Server-side
 Execute docker-compose command
