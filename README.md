@@ -4,6 +4,8 @@ To create a chatroom by communicating between server-side and client-side over H
 
 The docker-compose file illustrated the deployment of architecture in production. There are main three parts which are Load Balance(Nginx), backend services and RabbitMQ. To achieve high traffic need, We can allocate enough backend services for client's connection through Load Balance to meet this requirement. Besides, RabbitMQ also provides a good role in a large distributed system.
 
+<img src="./pic/architecture.png" width="700px">
+
 #### Project Folders
 | Folder  |  Description  |
 | ------------ | ------------ |
