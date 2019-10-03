@@ -31,4 +31,5 @@ Specify server ip and port
 ```bash
 java -jar ./docker/chatclient/chatroom-client-stomp.jar 192.168.1.1 80
 ```
-
+### Result
+<img src="./pic/result.png" width="700px">
